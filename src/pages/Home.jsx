@@ -29,7 +29,7 @@ const Home = () => {
   console.log(supabase);
 
   return (
-    <div className='home-page'>
+    <div className='page'>
       {fetchError && <p>{fetchError}</p>}
       {smoothies && (
         <div className='smoothies'>
