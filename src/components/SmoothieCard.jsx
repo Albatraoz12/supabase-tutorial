@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import supabase from '../config/supabaseClient';
 
-const SmoothieCard = ({ smoothie }) => {
+const SmoothieCard = ({ smoothie, onDelete }) => {
   const handleDelete = async () => {
     const { data, error } = await supabase
       .from('smoothies')
@@ -14,7 +14,10 @@ const SmoothieCard = ({ smoothie }) => {
       console.log(error);
     }
 
-    if (data) alert('Record has been deleted!!');
+    if (data) {
+      onDelete(smoothie.id);
+      console.log(data);
+    }
   };
 
   return (
