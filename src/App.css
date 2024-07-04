@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  padding: 1.5rem;
+  color: white;
+  background-color: black;
+  font-size: 1.2rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.list-item {
+  list-style-type: none;
+}
+.list-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.list-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
